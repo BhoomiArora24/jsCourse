@@ -23,6 +23,7 @@
   //   alert('You clicked on the owl image');
   // }
 
+  //best approach
   // document.getElementById('owl').addEventListener('click', function(){
   //   alert('You clicked on the owl image');
   //   //false -default set coz some application are not completed using this false ya true
@@ -33,21 +34,27 @@
   //target, toElement, srcElement, currentTarget,
   //clientx, clientY, screenX, screenY
   //altKey, ctrlKey, shiftKey, keyCode
-  document.getElementById('images').addEventListener('click', function(e){
-    console.log("clicked inside ul");
-  }, true)
+  // document.getElementById('images').addEventListener('click', function(e){
+  //   console.log("clicked inside ul");
+  // }, false)
 
-  document.getElementById('owl').addEventListener('click', function(e){
-    console.log("owl clicked");
-    e.stopPropogation();//doesn't bubbles stops only after printing owl clicked
-  }, true)//true goes from top to bottom
-  //false goes from bottom to top
+  // document.getElementById('owl').addEventListener('click', function(e){
+  //   console.log("owl clicked");
+  //   e.stopPropogation();//doesn't bubbles stops only after printing owl clicked
+  // }, true)//true goes from top to bottom
+  // //false goes from bottom to top
 
-  document.getElementbyId('google').addEventListener('click', function(e){
-    e.preventDefault();
-    e.stopPropogation();
-    console.log("google clicked");
-  },false)
+  // document.getElementById('google').addEventListener('click', function(e){
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   console.log("google clicked");
+  // },false)
+
+  document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.parentNode);
+    let removeit= e.target.parentNode;
+    removeit.remove();
+  })
 
 
   //attachEvent()
