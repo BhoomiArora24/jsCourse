@@ -17,7 +17,7 @@ for (let i = 1; i <10; i++) {
 }
 
 let myArray = ["flash", "batman", "superman"];
-//                                         agr ye nhi kiya to bar bar flash hi print hota rhega ctrl c krke rokna pdega coz it consumes memory  
+//agr ye nhi kiya to bar bar flash hi print hota rhega ctrl c krke rokna pdega coz it consumes memory  
 for (let index = 0; index <myArray.length; index++){
   const element = myArray[index];
   console.log(element);
