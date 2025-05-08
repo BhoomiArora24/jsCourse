@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:aliceblue">
+    <img id=imgg src="https://avatars.githubusercontent.com/u/17576078?v=4">
+    <button id="btn" style="background-color: aqua;">Followers</button>
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+</body>
+<script>
+    //XMLHttpRequest//A METTHOD THROGH WHICH A DATA REQUEST IS SENDED OR RECIEVED
+
+    const imgg= document.querySelector('#imgg');
+    imgg.style.display="block";
+    imgg.style.margin="auto";
+
+    const btn= document.querySelector('#btn');
+    btn.style.hover
+
+    const requestURL= 'https://api.github.com/users/hiteshchaudhary';
+    const xhr =new XMLHttpRequest();//creates a new XMLHttpRequest object (xhr) that allows you to make HTTP requests (like GET, POST) to a server asynchronously (without refreshing the page)
+    xhr.open('GET',requestURL)//send the request AND configures WHICH METHOD TO USE GET OR POST
+    xhr.onreadystatechange= function(){//sets up an event listener for the onreadystatechange event, which fires every time the readyState of the request changes AND --------readyState is a property of the XMLHttpRequest object in JavaScript that tells you the current state of the HTTP request. ----- IS EVENTS ARE MEENTIONED ABOVE IN THE BODY COMMENTED ONES
+
+        console.log(xhr.readyState)//Logs the current readyState to the console
+        if(xhr.readyState===4){//Checks if the request is complete (DONE) and ready to process.
+            const data=JSON.parse(this.responseText);//Converts the JSON string (received from GitHub) into a JavaScript object
+            console.log(typeof data);
+            console.log(data.followers);//Prints the number of followers the user has on GitHub
+            
+            console.log(this.responseText)//Logs the raw JSON string response returned by the API
+        }
+    }//to continnously track changes
+    
+    xhr.send();
+</script>
+</html>
