@@ -19,7 +19,7 @@ object literal
 - instances -- new , this keyword
 
 ## 4 pillars
-- encapsulation
+- encapsulation- wrapping up in one unit
 - inheritance
-- polymorphism
-- abstraction
+- polymorphism- many forms
+- abstraction - data hiding
