@@ -34,6 +34,42 @@ heropower.hitesh();
 
 myHeroes.hitesh();
 
-const Teacher = {
-    makeVedio : true ,
+
+//to link objects
+
+const User = {
+    name: "Navya",
+    email: "navya@google.com"
 }
+const Teacher = {
+    makeVedio : true 
+}
+
+const TeachingSupport = {
+    isAvailable: false
+}
+
+const TASupport = {
+    makeAssignaments: 'JS Assignments', 
+    fullTime: true ,
+    __proto__: TeachingSupport
+}
+
+Teacher.__proto__ = User;
+
+
+
+//modern Syntax
+Object.setPrototypeOf(TeachingSupport, Teacher);
+
+let anotherUserName = "ChaiAurCode    "
+
+String.prototype.trueLength = function(){
+    console.log(`${this}`);
+    console.log(`${this.name}`);
+    console.log(`True length is: ${this.trim().length}`);
+}
+
+anotherUserName.trueLength();
+
+"        hitesh       ".trueLength();
