@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange"> orange </button>
+    <button id="green"> green </button>
+    <script>
+        // function init() {
+        //     let name = "Mozilla"; // name is a local variable created by init
+        //     function displayName() {
+        //         // displayName() is the inner function, that forms a closure
+        //         console.log(name); // use variable declared in the parent function
+        //     }
+        //     displayName();
+        // }
+        
+        // init();
+
+
+        // init() creates a local variable called name and a function called displayName(). The displayName() function is an inner function that is defined inside init() and is available only within the body of the init() function. Note that the displayName() function has no local variables of its own. However, since inner functions have access to the variables of outer scopes, displayName() can access the variable name declared in the parent function, init()
+
+
+        // function outer(){
+        //     let username = "navya";
+
+        //     // console.log(secret);//no access
+        //     function inner(){
+        //         let secret = "my123";
+        //         console.log("inner",username);//username availaible in scope
+        //     }
+
+        //     function innertwo(){
+        //         console.log("innertwo",username);//username availaible in scope
+        //         // console.log(secret);//no access
+        //     }
+        //     inner();
+        //     innertwo();
+        // }
+
+        // outer();
+        // console.log("Too outer",username);//username not availaible out of scope
+
+
+
+
+        // ------------CLOSURE
+
+        // function makeFunc() {
+        //     const name = "Mozilla";
+        //     function displayName() {
+        //         console.log(name);
+        //     }
+        //     return displayName;
+        // }
+
+        // const myFunc = makeFunc();
+        // myFunc();
+
+
+    </script>
+
+    <script>
+        document.querySelector('#orange').onclick = function(){
+            document.body.style.background = 'orange';
+        }
+    </script>
+</body>
+</html>
