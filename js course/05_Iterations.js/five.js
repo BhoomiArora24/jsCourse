@@ -1,3 +1,8 @@
+// forEach() is a higher-order function
+// It takes another function as an argument — this function is called a callback function.
+
+
+
 const coding = ["js", "ruby", "java", "python", "cpp"];
               //call back function- has no name    
 coding.forEach( function (item) {

@@ -18,7 +18,7 @@ const newString = gameName.substring(0,4);//output: navy index 4 no included
 //it will start through 0 only 
 console.log(newString);
 
-const anotherString= gameName.slice(-7,4);
+const anotherString= gameName.slice(-7,4);//length:8-7=1
 console.log(anotherString);
 
 const newStringOne= "      navya     ";

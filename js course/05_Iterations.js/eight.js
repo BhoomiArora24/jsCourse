@@ -6,6 +6,12 @@ myTotal = myNums.reduce( function (acc, currval) {
   return acc + currval;
 }, 0)
 
+const myNum = [7,8,9];
+reduceFunc= myNum.reduce((acc, currval)=>{
+  const num= `${acc}+${currval}`;
+  return acc+ currval;
+},10)
+console.log(reduceFunc);
 //through arrow function
 // myTotal = myNums.reduce( (acc, currval) => acc + currval, 0)
 

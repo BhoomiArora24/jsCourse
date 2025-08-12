@@ -2,7 +2,7 @@
 
 // alert(3+3)//we are using node js not browser so this can only be run in browser
 
-console.log(3+3);
+console.log(3+3);//6
 console.log("Navya");
 
 let name="navya";// string
@@ -13,7 +13,7 @@ let isloggedIn = false //boolean
 const bigNumber=567893456789002356789n//bigInt
 //string
 //boolean
-//null =standalone value
+//null =standalone value//seted manually be the developer to indiacate no value
 //undefined= no value assigned till now
 const id =Symbol('123')//symbol => unique
 const anotherId =Symbol('123')//symbol => unique
@@ -28,5 +28,5 @@ console.log(id==anotherId);//output: false
 
 //interview important
 console.log(typeof null); //output=object
-console.log(typeof undefined); //output= object
+console.log(typeof undefined); //output= undefined
 console.log(typeof bigNumber);//output:bigint

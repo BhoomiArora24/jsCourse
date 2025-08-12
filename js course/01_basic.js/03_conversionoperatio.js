@@ -14,7 +14,7 @@ console.log(valueInNumber);//output: 1
 
 let isLoggedIn= "";
 let booleanIsLoggedIn= Boolean(isLoggedIn);
-console.log(booleanIsLoggedIn);
+console.log(booleanIsLoggedIn);//false
 //1= true
 //0= false
 //""=false
@@ -23,9 +23,9 @@ console.log(booleanIsLoggedIn);
 
 let someNumber= 33;
 let stringNumber= String(someNumber);
-console.log(stringNumber);
+console.log(stringNumber);//33
 
-console.log(typeof stringNumber);
+console.log(typeof stringNumber);//string
 
 // *************************Operations*************************
 
@@ -33,12 +33,13 @@ let value=3;
 let negValue= -value;
 console.log(negValue);
 
-console.log(2+2);
-console.log(2-2);
-console.log(2*2);
-console.log(2/2);
-console.log(2%2);
-console.log(2**2);
+console.log(2+2);//4
+console.log(2-2);//0
+console.log(2*2);//4
+console.log(2/2);//1
+console.log(2%2);//0
+console.log(2**2);//Exponentiation Operator--- It raises the first number to the power of the second number.
+console.log(2**3);//8
 
 let str1="Navya ";
 let str2="Arora";
@@ -50,7 +51,7 @@ console.log("1"+2+2);//output: 122
 console.log(1+2+"2");//output: 32
 console.log((3+4)*(5%6));//output: 35
 console.log(true);//output: true
-console.log(+true);//output: 1
+console.log(+true);//output: 1-- The + before it is the unary plus operator, which converts its operand into a number.
 console.log(+"");//output: 0
 
 

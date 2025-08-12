@@ -24,7 +24,7 @@ const map = new Map();
 map.set('IN', "India");
 map.set('IN', "India");
 map.set('USA', "United States of America");
-map.set('FR', "France");
+map.set('FR', 'France');
 
 console.log(map);
 
@@ -38,6 +38,6 @@ for (const [key, value] of map) {
 //not working as myObject is not iterable
 const myObject={1:'a', 2:'b', 3:'c'}
 
-for (const obj of myObject) {
-  console.log(obj);
-}
+// for (const obj of myObject) {
+//   console.log(obj);
+// }

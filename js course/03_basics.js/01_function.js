@@ -37,7 +37,7 @@ function calculateCartPrice(...num1){
 console.log(calculateCartPrice(200,400,500,600))
 
 function calculateCartPrice2(val1,val2,...num1){ //val1 stores 200, val2 stores 400, and the remaining comes in the form of array
-  return num1;
+  return {val1, val2, num1};
 }
 
 console.log(calculateCartPrice2(200,400,500,600))

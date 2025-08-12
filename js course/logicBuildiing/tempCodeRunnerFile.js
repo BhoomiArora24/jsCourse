@@ -1,0 +1,3 @@
+
+counter.click(); 
+counter.click(); 

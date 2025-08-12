@@ -21,6 +21,11 @@ console.log(Array.from("Navya"));
 console.log(Array.from({name:"Navya"}));//interesting for interviews
 //gives empty array coz vo use convert ni kr pa ra so we should tell ki 
 //keys ka array bnao ya kiska or agr nhi bn pata so it gives an empty array
+console.log(Array.from(Object.keys({name: "Navya"}))); 
+// ['name']
+
+console.log(Array.from(Object.values({name: "Navya"}))); 
+// ['Navya']
 
 let score1= 100;
 let score2= 200;

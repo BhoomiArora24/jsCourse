@@ -9,6 +9,9 @@
     <button id="orange"> orange </button>
     <button id="green"> green </button>
     <script>
+
+
+//--------------------------LEXICAL SCOPING------------------------
         // function init() {
         //     let name = "Mozilla"; // name is a local variable created by init
         //     function displayName() {
@@ -26,6 +29,7 @@
 
         // function outer(){
         //     let username = "navya";
+        // nor parent can access  through child 
 
         //     // console.log(secret);//no access
         //     function inner(){
@@ -35,7 +39,7 @@
 
         //     function innertwo(){
         //         console.log("innertwo",username);//username availaible in scope
-        //         // console.log(secret);//no access
+        //         // console.log(secret);//no access-- can access things through parent class but not through brother inner
         //     }
         //     inner();
         //     innertwo();
@@ -57,16 +61,31 @@
         //     return displayName;
         // }
 
-        // const myFunc = makeFunc();
+        // const myFunc = makeFunc();//IT GETS THE WHOLE SCOPE LIKE ALSO NAME IT FETCHES NOT JUST THE FUNCTION DISPLAY NAME SO THAT IS LEXICAL SCOPE
         // myFunc();
 
 
     </script>
 
     <script>
-        document.querySelector('#orange').onclick = function(){
-            document.body.style.background = 'orange';
+        // document.getElementById('orange').onclick = function(){
+        //     document.body.style.background = 'orange';
+        // }
+
+        // document.getElementById('green').onclick = function(){
+        //     document.body.style.background = 'green';
+        // }
+
+
+        function clickHandler(color){
+            return function(){
+                document.body.style.background = `${color}`;
+            }
+            
         }
-    </script>
+
+        document.getElementById('orange').onclick = clickHandler("orange");
+        document.getElementById('green').onclick = clickHandler("green");
+        </script>
 </body>
 </html>

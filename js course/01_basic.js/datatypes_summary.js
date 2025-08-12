@@ -6,7 +6,8 @@
 
 //Array, Objects , functions 
 
-const heroesArray = ["Navya", "Esha", "avinash"];
+const heroesArray = ["Navya", 24, "avinash"];
+console.log(heroesArray);
 let myObj ={
   name :"navya",
   age : 23
