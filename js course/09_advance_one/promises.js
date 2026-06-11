@@ -121,3 +121,5 @@ const promiseFour = new Promise(function(resolve, reject){
                 console.log(error); // if fetch fails
             });
     
+
+            fetch()

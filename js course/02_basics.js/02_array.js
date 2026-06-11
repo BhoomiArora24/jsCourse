@@ -15,7 +15,7 @@ const another_array=[1,2,3,[4,5,6],7,[6,7,[4,5]]];
 const real_another_array = another_array.flat(Infinity);//makes it a whole one array and infinity checks the depth we can also give the no of 
 //times we want to flatten the array but infinity checks it by itself
 console.log(real_another_array);
-
+console.log("See now");
 console.log(Array.isArray("Navya"));
 console.log(Array.from("Navya"));
 console.log(Array.from({name:"Navya"}));//interesting for interviews

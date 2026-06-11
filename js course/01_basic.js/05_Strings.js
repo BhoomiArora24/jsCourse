@@ -6,7 +6,7 @@ console.log(`Hello my name is ${name} and my repocount is ${repoCount}`);
 
 const gameName = new String('navya-aa');//another way of defining a string
 console.log(gameName[0]);
-console.log(gameName.__proto__);
+console.log(gameName.__proto__);   
 console.log(gameName.length);
 console.log(gameName.toUpperCase());
 
@@ -18,8 +18,8 @@ const newString = gameName.substring(0,4);//output: navy index 4 no included
 //it will start through 0 only 
 console.log(newString);
 
-const anotherString= gameName.slice(-7,4);//length:8-7=1
-console.log(anotherString);
+const anotherString= gameName.slice(-7,4);//length:8-7=1// output -- avy
+console.log("Slice:" + anotherString);
 
 const newStringOne= "      navya     ";
 console.log(newStringOne);

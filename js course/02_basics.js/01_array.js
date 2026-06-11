@@ -29,10 +29,10 @@ console.log(newArr);
 console.log(typeof newArr);
 
 //slice, spice
-console.log("A", myArray);
+console.log("A", myArray);//Output: A [ 1, 2, 3, 4, 5, 6 ]
 const myn1 = myArray.slice(1,3);
-console.log(myn1);
-console.log("B", myArray);
+console.log(myn1);//Output: [ 2, 3 ]
+console.log("B", myArray);//Output: B [ 1, 2, 3, 4, 5, 6 ]
 const myn2= myArray.splice(1,3);//includes the range and removes the spliced elements from main array
-console.log("c",myArray);
-console.log(myn2);
+console.log("c",myArray);//c [ 1, 5, 6 ]
+console.log(myn2);//[ 2, 3, 4 ]

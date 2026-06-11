@@ -32,3 +32,25 @@ form.addEventListener('submit', function(e) {
     results.innerHTML = `<span>BMI: ${bmi} - Category: ${bmiCategory}</span>`;
   }
 });
+
+let i =0;
+let interval;
+let countHeading = document.querySelector("#count");
+let start = document.querySelector ("#start");
+let stop = document.querySelector ("#stop");
+
+
+
+start.addEventListener("click", function () {
+  if (!interval) {
+    interval = setInterval(() => {
+      i++;
+      countHeading.innerText = `Count is ${i}`;
+    }, 2000);
+  }
+});
+
+stop.addEventListener("click", function () {
+  clearInterval(interval);
+  interval = 0;
+})

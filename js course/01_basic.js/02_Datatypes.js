@@ -28,5 +28,5 @@ console.log(id==anotherId);//output: false
 
 //interview important
 console.log(typeof null); //output=object
-console.log(typeof undefined); //output= undefined
+console.log(typeof undefined); //output = undefined
 console.log(typeof bigNumber);//output:bigint

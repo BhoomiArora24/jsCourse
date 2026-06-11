@@ -66,3 +66,10 @@ function returnSecondValue(getArray){
 
 console.log(returnSecondValue(myNewArray));
 // console.log(returnSecondValue([200, 400, 100, 600]));//another way to call the function
+
+
+function calcPrice(...num1){
+  return num1;
+}
+
+console.log(calcPrice(200, 300, 400, 500));
