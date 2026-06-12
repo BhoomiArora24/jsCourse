@@ -98,4 +98,13 @@ efg()();
 
 
 //PURE FUNCTION VS IMPURE FUNCTION
-//purefunction -- 
+//pure function -- aisa function jo bahar ki value ko change na kre
+function dfg(){
+    console.log("hehehe")
+}
+
+//impure function -- aisa function jo bahar ki value ko change kr de
+function ghj(){
+    a++;// a value changes so impure 
+}
+
