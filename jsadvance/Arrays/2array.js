@@ -1,13 +1,12 @@
 //SORT , FOREACH, MAP , FILTER , REDUCE---- ALL OF THEM ACCEPTS A FUNCTION ONLY
 
 
-
 //FOREACH - GOES TO EVERY OTHER ELEMENT AND THEN DOES WHATEVER CHANGE IS REQUIRED TO DO
 let arr = [67, 34, 69, 23, 46];
 arr.forEach(function(val){
     console.log(val);
 })
-//in for each -- the function it is accepting will run for every simgle element of arr
+//for each -- the function it is accepting will run for every simgle element of arr
 
 
 //-----------------------------------------
@@ -72,4 +71,16 @@ let findInArray = yoo.find(function(val){
 console.log("let's find element in yoo array: " + findInArray);
 
 //-------------------------------------------
-//SOME --
+//SOME --in An array if any element satisfies the condition returns T/F
+let someMethod = yoo.some(function(val){
+    return val > 6;
+})
+console.log(someMethod);
+
+
+//----------------------------------------------
+//EVERY --in An array if all element satisfies the condition returns t/F
+let everyMethod = yoo.every(function(val){
+    return val > 5;
+})
+console.log(everyMethod);

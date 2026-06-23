@@ -38,6 +38,10 @@ console.log(marks);
 //need to give two value in function as a parameter
 //it is changing the orignal array only here until we store it all into a variable
 
+//BIG BLUNDER IN SORT
+//WHENEVER WE USE DIRECT .SORT() WITHOUT FUNCTION IF WE ARE TRYING TO SORT NUMERICAL VALUES THIS WAY EX:[100, 20, 10].SORT() IT CONVERTS NUMERICAL VALUE INTO A STING WHICH DOES NOT ALLOWS TO SORT THE ARRAY BUT IF IT THE ARRAY HAS STRING VALUE IN IT TO SORT THEN IT WORKS FINE -- TO FIX WE NEED TO USE COMPARE FUNCTION
+
+
 let hii = [29,38,47,56,15];
 hii.sort(function(a,b){
     // return a-b;//for ascending order arrangement
