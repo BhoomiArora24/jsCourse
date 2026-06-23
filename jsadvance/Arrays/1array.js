@@ -35,6 +35,7 @@ console.log(marks);
 
 //SORT- it has a different syntax
 //it accepts a function only
+//need to give two value in function as a parameter
 //it is changing the orignal array only here until we store it all into a variable
 
 let hii = [29,38,47,56,15];
