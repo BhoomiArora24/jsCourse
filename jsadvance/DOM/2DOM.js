@@ -23,7 +23,7 @@ b.setAttribute("src","https://i.pinimg.com/736x/9f/77/69/9f776960b5fe247c5cd748c
 
 //--GET ATTRIBUTE---
 let c = document.querySelector("a");
-// console.log(a.getAttribute("href"));
+console.log(c.getAttribute("href"));
 
 
 //removing an attribute
