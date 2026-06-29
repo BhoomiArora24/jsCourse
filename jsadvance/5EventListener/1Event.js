@@ -1,4 +1,4 @@
-//browser mein page pr koi bhi change kro even raise hua
+//browser mein page pr koi bhi change kro event raise hua
 //mouse move event raised
 //click- event raised
 //type- event raised

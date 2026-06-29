@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
+    <style>
+        .btn{
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="h-screen bg-[#222] flex items-center justify-center">
+    <div class="h-screen bg-[#222] flex items-center justify-center flex-col">
         <h1 class="text-[#555] text-[10rem] font-light">p</h1>
+        <input class="hidden" type="file">
+        <div id="btn" class="py-3 px-5 text-white bg-green-600 rounded-md text-xl font-medium hover:bg-green-900">Upload File</div>
     </div>
+
+
+    
 
     <script src="3Event.js"></script>
     
