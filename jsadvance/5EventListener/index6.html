@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Gilroy";
+            box-sizing: border-box;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+            padding: 30px;
+            background-color: #222;
+            color: white;
+        }
+
+        #main{
+            padding: 30px;
+            background-color: #222;
+        }
+
+        #nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 100px;
+            background-color: #444;
+        }
+
+        a{
+            color: white;
+        }
+
+        button{
+            padding: 12px 22px;
+            background-color: red;
+            border-radius: 5px;
+            border: none;
+            font-weight: 600;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+ <!-- Event Bubbling -->
+    <div id="main">
+        <div id="nav">
+            <a href="">home</a>
+            <a href="">about</a>
+            <button>Click and Follow</button>
+        </div>
+    </div>
+
+
+    <ul>
+        <li>Guava</li>
+        <li>Grapes</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
+    
+    <div id="abcd"></div>
+    <script src="6Event.js"></script>
+</body>
+</html>

@@ -31,8 +31,12 @@ button.addEventListener("click", function(){
 let pet= document.querySelector(".pet");
 let text = document.querySelector("textarea");
 text.addEventListener("input", function(dets){
+    console.log(dets);
     pet.textContent = `Character: ${dets.target.textLength}`
     if(dets.target.value === " "){
         pet.textContent = `Character: ${dets.target.textLength -1}`  
+    }
+    else{
+        pet.textContent = `Character: ${dets.target.textLength}`
     }
 })
