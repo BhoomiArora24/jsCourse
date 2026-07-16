@@ -6,8 +6,10 @@ function abc(){
         console.log(a);
     }
 }
+// 10-- it's because it's there in console.log
+// undefined-- because def function is not returning anything
 
-abc();
+console.log(abc()());
 
 //LEXICAL SCOPING -- 
 

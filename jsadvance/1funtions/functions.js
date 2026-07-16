@@ -68,11 +68,20 @@ function abcde(a,b,c, ...val){
 
 abcde(1,2,3,4,5,6,7,8,9);
 
+//SPREAD VS REST
+// SPREAD-- Expands an array/object into individual elements
+//Used while calling a function or creating arrays/objects
+// Spread = Expand
+
+//REST -- Collects multiple elements into a single array/object
+//Used while defining a function or destructuring
+//Rest = Collect
+
 //RETURN
 function nivi(){
     return 12;
 }
-let value = nivi()//jha se aya h vhi jata h (it goes to the place from whre it is called)
+let value = nivi()//jha se aya h vhi jata h (it goes to the place from where it is called)
 console.log(value);
 
 //HIGH ORDER FUNCTIONALITY-- hof is a function jo ki ya to return kre ek function ko OR/AND accept kre function kro as its argument
