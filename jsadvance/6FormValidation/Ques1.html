@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email & Password Validator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          Segoe UI,
+          sans-serif;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0f172a;
+      }
+
+      .container {
+        width: 380px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 35px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      h2 {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 30px;
+        font-size: 30px;
+      }
+
+      .input-box {
+        margin-bottom: 22px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #d1d5db;
+        font-size: 15px;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #374151;
+        background: #1f2937;
+        color: white;
+        border-radius: 8px;
+        outline: none;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      input::placeholder {
+        color: #9ca3af;
+      }
+
+      input:focus {
+        border-color: #3b82f6;
+      }
+
+      small {
+        display: block;
+        color: #ef4444;
+        margin-top: 6px;
+        min-height: 18px;
+        font-size: 13px;
+      }
+
+      button {
+        width: 100%;
+        padding: 13px;
+        background: #3b82f6;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 17px;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #2563eb;
+      }
+
+      .resultMessage {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        color: #ccc0c0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form autocomplete="off" id="form">
+        <h2>Login</h2>
+
+        <div class="input-box">
+          <label>Email</label>
+          <input autocomplete="off"  type="text" id="email" placeholder="Enter your email" />
+          <small id="emailError"></small>
+        </div>
+
+        <div class="input-box">
+          <label>Password</label>
+          <input
+            autocomplete="off" type="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+          <small id="passwordError"></small>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="resultMessage">
+      </div>
+    </div>
+
+    <script src="script1.js"></script>
+  </body>
+</html>

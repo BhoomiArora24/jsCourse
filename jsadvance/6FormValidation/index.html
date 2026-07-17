@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Gilroy";
+            box-sizing: border-box;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+            padding: 30px;
+            background-color: #222;
+            color: white;
+        }
+
+        #hide{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <!-- pattern="[a-z]{3,8}" pattern attribute is used to specify a regular expression that the input field's value must match in order for the form to be submitted. In this case, the pattern requires the input to consist of lowercase letters (a-z) and be between 3 and 8 characters long. The "required" attribute indicates that this field must be filled out before submitting the form. -->
+        <input pattern="[a-z]{3,8}"required id="name" type="text" placeholder="name">
+        <br>
+        <small id="hide">Your name should be grater than 2 characters</small>
+        <br>
+        <input required type="email" placeholder="email">
+        <br><br>
+        <input required type="password" placeholder="password">
+        <br><br>
+        <select required>
+            <option value="Select your Gender" disabled selected>Select your Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <br><br>
+        <textarea placeholder="tell us about you"></textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
