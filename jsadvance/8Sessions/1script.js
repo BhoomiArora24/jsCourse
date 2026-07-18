@@ -14,6 +14,8 @@ localStorage.clear();
 localStorage.setItem("friends", JSON.stringify(["hey", "bye", "hello"]))
 //then convert to parse
 JSON.parse(localStorage.getItem("friends"));
+//why is it like this?
+//because the api of local storage is designed to store only string data, so if you want to store complex data types like arrays or objects, you need to convert them into a string format using JSON.stringify() before storing them. When retrieving the data, you can convert it back to its original format using JSON.parse().
 
 //session storage- ye apka data temporarily store krta h mtlb tab bnd hua aur data gaya
 sessionStorage.setItem("name", "navya");
