@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Preference</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          Segoe UI,
+          sans-serif;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0f172a;
+        transition: 0.4s;
+      }
+
+      .container {
+        width: 420px;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      h1 {
+        color: white;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #cbd5e1;
+        line-height: 1.6;
+        margin-bottom: 35px;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 30px;
+        font-size: 17px;
+        border-radius: 12px;
+        color: white;
+        background: #2563eb;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+      }
+
+      /* Light Theme */
+
+      body.light {
+        background: #e5e7eb;
+      }
+
+      body.light .container {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      body.light h1 {
+        color: #111827;
+      }
+
+      body.light p {
+        color: #4b5563;
+      }
+
+      body.light button {
+        background: #111827;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Theme Preference</h1>
+
+      <p>
+        Your selected theme should remain the same even after refreshing the
+        page.
+      </p>
+
+      <button id="themeBtn">🌙 Dark Mode</button>
+    </div>
+
+    <script src="2script.js"></script>
+  </body>
+</html>
