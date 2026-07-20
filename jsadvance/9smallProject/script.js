@@ -53,8 +53,7 @@ function showUsers(arr) {
 
     const bgImg = document.createElement("img");
     bgImg.classList.add("bg-img");
-    bgImg.src =
-      user.pic;
+    bgImg.src = user.pic;
 
     const blurredLayer = document.createElement("div");
     blurredLayer.style.backgroundImage = `url(${user.pic}`;
@@ -67,8 +66,7 @@ function showUsers(arr) {
     heading.textContent = user.name;
 
     const paragraph = document.createElement("p");
-    paragraph.textContent =
-      user.bio;
+    paragraph.textContent = user.bio;
 
     // Append elements
     content.appendChild(heading);
@@ -86,15 +84,22 @@ function showUsers(arr) {
 
 showUsers(users);
 
-let inp = document.querySelector(".inp")
-inp.addEventListener("input", function(){
-    let newUsers = users.filter((user) => {
-        return user.name.startsWith(inp.value)
-    })
-    document.querySelector(".cards").innerHTML = "";
+let inp = document.querySelector(".inp");
+inp.addEventListener("input", function () {
+  let newUsers = users.filter((user) => {
+    return user.name.startsWith(inp.value);
+  });
+  let cards = document.querySelector(".cards");
+  cards.innerHTML = "";
+
+  if (newUsers.length === 0) {
+    cards.innerHTML = "<h1 style='color:white;'>No User Found</h1>";
+  } else {
     showUsers(newUsers);
-})
+  }
+});
 
 //saare users show krana
 // filter krana har baqar input karne pe
 //show karna filtered users
+//task -- no user should display when there is no user availaible to display
