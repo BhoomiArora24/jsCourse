@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Card UI</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-[#252525] min-h-screen flex justify-center items-center">
+
+<div class="flex items-center gap-14">
+
+    <!-- LEFT BUTTONS -->
+
+    <div class="flex flex-col gap-4">
+
+        <button id="addBtn"
+        class="w-12 h-12 rounded-full bg-[#2f2f2f] border border-gray-700 text-white text-2xl hover:bg-[#3b3b3b] transition">
+            +
+        </button>
+
+        <button id="upBtn"
+        class="w-12 h-12 rounded-full bg-[#2f2f2f] border border-gray-700 text-white hover:bg-[#3b3b3b] transition">
+            ↑
+        </button>
+
+        <button id="downBtn"
+        class="w-12 h-12 rounded-full bg-[#2f2f2f] border border-gray-700 text-white hover:bg-[#3b3b3b] transition">
+            ↓
+        </button>
+
+    </div>
+
+
+    <!-- CARD -->
+
+    <div class="relative">
+
+        <!-- Fake stack -->
+        <div class="absolute top-3 left-3 w-full h-full rounded-3xl bg-[#333333]"></div>
+
+        <div class="absolute top-1.5 left-1.5 w-full h-full rounded-3xl bg-[#303030]"></div>
+
+
+        <!-- Current Card -->
+        <div id="cardContainer"
+        class="relative bg-[#2c2c2c] border border-gray-700 rounded-3xl w-[380px] p-7 shadow-2xl">
+
+            <div class="flex items-center gap-4">
+
+                <img
+                src="https://i.pravatar.cc/100"
+                class="w-14 h-14 rounded-full object-cover">
+
+                <div>
+
+                    <h2 class="text-2xl font-semibold text-white">
+                        Fatima Uma
+                    </h2>
+
+                    <p class="text-gray-400 text-sm">
+                        UI Designer
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="grid grid-cols-2 gap-y-5 mt-7">
+
+                <div>
+
+                    <p class="text-gray-500 text-sm">
+                        Home town
+                    </p>
+
+                    <p class="text-white">
+                        Singapore
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <p class="text-gray-500 text-sm">
+                        Priority
+                    </p>
+
+                    <p class="text-red-500 font-medium">
+                        Urgent
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <p class="text-gray-500 text-sm">
+                        Bookings
+                    </p>
+
+                    <p class="text-white">
+                        3 Times
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <p class="text-gray-500 text-sm">
+                        Due
+                    </p>
+
+                    <p class="text-white">
+                        18 Aug
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="flex gap-5 mt-8">
+
+                <button
+                class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-900">
+                    📞 Call
+                </button>
+
+                <button
+                class="text-gray-300 hover:text-white">
+                    Message
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- PRIORITY -->
+
+    <div id="priority" class="flex flex-col gap-5">
+
+        <div
+        class="w-7 h-7 rounded-full bg-red-600 cursor-pointer hover:scale-110 transition">
+        </div>
+
+        <div
+        class="w-7 h-7 rounded-full bg-orange-500 cursor-pointer hover:scale-110 transition">
+        </div>
+
+        <div
+        class="w-7 h-7 rounded-full bg-yellow-400 cursor-pointer hover:scale-110 transition">
+        </div>
+
+        <div
+        class="w-7 h-7 rounded-full bg-green-500 cursor-pointer hover:scale-110 transition">
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- FORM (Hidden for now) -->
+
+<div id="formModal"
+class="hidden fixed inset-0 bg-black/70 justify-center items-center">
+
+    <div class="bg-[#2b2b2b] w-[430px] rounded-3xl p-8">
+
+        <h2 class="text-white text-2xl font-semibold mb-6">
+            Add New Card
+        </h2>
+
+        <form class="space-y-4">
+
+            <input
+            type="text"
+            placeholder="Name"
+            class="w-full p-3 rounded-lg bg-[#3a3a3a] text-white outline-none">
+
+            <input
+            type="text"
+            placeholder="Home Town"
+            class="w-full p-3 rounded-lg bg-[#3a3a3a] text-white outline-none">
+
+            <input
+            type="text"
+            placeholder="Bookings"
+            class="w-full p-3 rounded-lg bg-[#3a3a3a] text-white outline-none">
+
+            <input
+            type="date"
+            class="w-full p-3 rounded-lg bg-[#3a3a3a] text-white outline-none">
+
+            <select
+            class="w-full p-3 rounded-lg bg-[#3a3a3a] text-white outline-none">
+
+                <option>Urgent</option>
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+
+            </select>
+
+            <div id="close-form" class="flex justify-end gap-3 pt-5">
+
+                <button
+                class="px-5 py-2 rounded-lg bg-gray-600 text-white">
+                    Cancel
+                </button>
+
+                <button
+                class="px-5 py-2 rounded-lg bg-blue-600 text-white">
+                    Save
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
