@@ -1,4 +1,4 @@
-//exection const 
+//execution context
 // //js sbse pehle apka function dekhta h sbse pehle js banata hai execution context, ye ek process hai jo ki 2 different phases m chalta h
 //1- memory phase
 //2- execution phase
