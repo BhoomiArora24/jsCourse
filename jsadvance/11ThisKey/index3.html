@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>User Cards</title>
+</head>
+
+<body class="bg-[#0f0f0f] min-h-screen text-white">
+
+  <div class="max-w-6xl mx-auto py-12 px-6">
+
+    <!-- Form -->
+    <div class="max-w-md mx-auto bg-[#232323] border border-gray-700 rounded-xl p-7 shadow-lg">
+
+      <h1 class="text-3xl font-bold text-center mb-8">
+        Add User
+      </h1>
+
+      <form class="space-y-5">
+
+        <div>
+          <label class="block text-sm text-gray-300 mb-2">
+            Name
+          </label>
+
+          <input
+            type="text"
+            placeholder="Enter name"
+            class="w-full bg-[#333333] border border-gray-600 rounded-md px-4 py-2.5 outline-none focus:border-blue-500 transition"
+          >
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-300 mb-2">
+            Role
+          </label>
+
+          <input
+            type="text"
+            placeholder="Enter role"
+            class="w-full bg-[#333333] border border-gray-600 rounded-md px-4 py-2.5 outline-none focus:border-blue-500 transition"
+          >
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-300 mb-2">
+            Bio
+          </label>
+
+          <textarea
+            rows="4"
+            placeholder="Write bio..."
+            class="w-full resize-none bg-[#333333] border border-gray-600 rounded-md px-4 py-3 outline-none focus:border-blue-500 transition"
+          ></textarea>
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-300 mb-2">
+            Photo URL
+          </label>
+
+          <input
+            type="text"
+            placeholder="Paste image URL"
+            class="w-full bg-[#333333] border border-gray-600 rounded-md px-4 py-2.5 outline-none focus:border-blue-500 transition"
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-[#2e2e2e] hover:bg-[#3b3b3b] border border-gray-600 py-3 rounded-md font-semibold transition duration-300"
+        >
+          Submit
+        </button>
+
+      </form>
+    </div>
+
+    <!-- Cards -->
+    <div
+      id="userContainer"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
+    >
+
+      <!-- Card -->
+      <div
+        class="bg-[#232323] rounded-xl border border-gray-700 p-6 text-center hover:-translate-y-2 hover:shadow-xl transition duration-300"
+      >
+
+        <img
+          src="https://i.pravatar.cc/150?img=11"
+          class="w-24 h-24 rounded-full object-cover border-4 border-gray-500 mx-auto"
+        >
+
+        <h2 class="text-2xl font-bold mt-5">
+          John Doe
+        </h2>
+
+        <p class="text-blue-400 font-medium mt-1">
+          Frontend Developer
+        </p>
+
+        <p class="text-gray-400 text-sm mt-4 leading-6">
+          Loves building beautiful UIs and learning new technologies.
+        </p>
+
+      </div>
+
+      <!-- Card -->
+      <div
+        class="bg-[#232323] rounded-xl border border-gray-700 p-6 text-center hover:-translate-y-2 hover:shadow-xl transition duration-300"
+      >
+
+        <img
+          src="https://i.pravatar.cc/150?img=47"
+          class="w-24 h-24 rounded-full object-cover border-4 border-gray-500 mx-auto"
+        >
+
+        <h2 class="text-2xl font-bold mt-5">
+          Jane Smith
+        </h2>
+
+        <p class="text-blue-400 font-medium mt-1">
+          Backend Engineer
+        </p>
+
+        <p class="text-gray-400 text-sm mt-4 leading-6">
+          Enjoys solving complex problems and optimizing APIs.
+        </p>
+
+      </div>
+
+      <!-- Card -->
+      <div
+        class="bg-[#232323] rounded-xl border border-gray-700 p-6 text-center hover:-translate-y-2 hover:shadow-xl transition duration-300"
+      >
+
+        <img
+          src="https://i.pravatar.cc/150?img=15"
+          class="w-24 h-24 rounded-full object-cover border-4 border-gray-500 mx-auto"
+        >
+
+        <h2 class="text-2xl font-bold mt-5">
+          Alex Lee
+        </h2>
+
+        <p class="text-blue-400 font-medium mt-1">
+          UI/UX Designer
+        </p>
+
+        <p class="text-gray-400 text-sm mt-4 leading-6">
+          Passionate about user experience and clean design systems.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="4script.js"></script>
+
+</body>
+</html>
