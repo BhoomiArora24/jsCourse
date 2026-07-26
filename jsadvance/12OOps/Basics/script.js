@@ -11,7 +11,7 @@ function CreateBiscuits(){
 }
 
 let biscuit1 = new CreateBiscuits();
-//biscuit1 is an object filled with thingse that are there in createBiscuits
+//biscuit1 is an object filled with things that are there in createBiscuits
 
 
 //humein seekhna h factories banaane, matlab ki aap ek bar blueprint bana do ki har object kaisa dikhega and hum log naye naye object with different values bna paenge, this is the sar of what oops does

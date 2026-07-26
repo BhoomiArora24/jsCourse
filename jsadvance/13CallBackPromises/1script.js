@@ -21,7 +21,10 @@ console.log("D");
 
 
 
-//Callback
+//Callback-- ek function ko agar ap ek aur functtion bhej dero ho param m to param wala function kehlata h callback
+
+
+//callback hell
 function profileLekarAo(username, cb){
     setTimeout(()=> {
         console.log(`profile fetech of ${username}`)
@@ -40,3 +43,14 @@ profileLekarAo("navya", function(data){//jb profile navya mil jaye to ye functio
         console.log(post);
     })
 })
+
+//callback
+function user(username, cb){
+    setTimeout(()=> {
+        console.log(`profile fetched of ${username}`)
+    }, 5000)
+}// ye kisine likha hoga
+
+user("Navya", function(){
+    console.log(`profile fetched`);
+})//jb profile mil jae is user ki to ye chlao
