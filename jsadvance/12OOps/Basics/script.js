@@ -43,6 +43,14 @@ function CreatePencil(name, price, color){
 
 CreatePencil.prototype.company = "Sheriyans";//when some value is same for all objects no need to write it in constructor function as it takes extra space instead add it in the constructor functions prototype
 
+//write is a method in obj
+CreatePencil.prototype.write = function(text){
+    console.log(this);
+    let h1 = document.createElement("h1");
+    h1.textContent = text;//pencil1.write("heyy"); text yha se uthana h
+    h1.style.color = this.color;//in a method this refers to its obj
+    document.body.append(h1);
+}
 
 //function that run though new are called --- constructor function--------
 //constructor function ka pehla letter capital hona chahiye -good practice
