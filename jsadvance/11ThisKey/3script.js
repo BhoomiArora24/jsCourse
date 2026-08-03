@@ -6,34 +6,32 @@ let photo = document.querySelector("#photo");
 let userContainer = document.querySelector("#userContainer");
 
 const userManager = {
-  users: [],
+  user: [],
 
-  init: function () {
+  init: function(){
     form.addEventListener("submit", this.submitForm.bind(this));
   },
 
-  submitForm: function (e) {
-    e.preventDefault();
+  submitForm: function(event){
+    event.preventDefault();
     this.addUser();
   },
 
-  addUser: function () {
-    this.users.push({
-      username: username.value,
+  addUser: function(){// it doesn't need event as param because it is already accessing it see below
+    this.user.push({
+      username: username.value,//through here fromt he form itself
       role: role.value,
       bio: bio.value,
       photo: photo.value,
-    });
-
-    form.reset();
+    }),
+    form.reset(),
     this.renderUI();
   },
 
-  renderUI: function () {
-    // Clear old cards
+  renderUI: function(){
     userContainer.innerHTML = "";
 
-    this.users.forEach((user, index) => {
+    this.user.forEach((user, index) => {
       const card = document.createElement("div");
 
       card.className =
@@ -75,10 +73,11 @@ const userManager = {
     });
   },
 
-  removeUser: function (index) {
-    this.users.splice(index, 1);
-    this.renderUI();
-  },
-};
+    //array.splice(startIndex, deleteCount)
+    removeUser: function(index){
+      this.user.splice(index, 1);
+      this.renderUI();
+    }
+  }
 
 userManager.init();
