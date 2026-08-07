@@ -1,7 +1,9 @@
 let addbtn = document.querySelector("#addBtn");
 let form = document.querySelector("#formModal");
 let closeForm = document.querySelector("#close-form");
-let cardContainer = document.querySelector('#cardContainer')
+let cardContainer = document.querySelector('#cardContainer');
+let submit = document.querySelector('.submit');
+let forms = document.querySelector('.form');
 
 addbtn.addEventListener("click", function () {
   form.style.display = "initial";
@@ -14,5 +16,10 @@ addbtn.addEventListener("click", function () {
 });
 
 closeForm.addEventListener("click", function () {
-  form.style.display = "initial";
+  form.style.display = "none";
 });
+
+forms.addEventListener("submit", function(e){
+  e.preventDefault();
+  let name = document.querySelector(".name")
+})

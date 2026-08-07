@@ -46,8 +46,9 @@ const users = [
   },
 ];
 
-function showUsers(arr) {
-  arr.forEach(function (user) {
+
+function showUser(arr){
+  arr.forEach(function (user){
     const card = document.createElement("div");
     card.classList.add("card");
 
@@ -82,24 +83,18 @@ function showUsers(arr) {
   });
 }
 
-showUsers(users);
+showUser(users);
 
-let inp = document.querySelector(".inp");
-inp.addEventListener("input", function () {
-  let newUsers = users.filter((user) => {
-    return user.name.startsWith(inp.value);
-  });
-  let cards = document.querySelector(".cards");
-  cards.innerHTML = "";
-
-  if (newUsers.length === 0) {
-    cards.innerHTML = "<h1 style='color:white;'>No User Found</h1>";
-  } else {
-    showUsers(newUsers);
+let input = document.querySelector(".inp");
+input.addEventListener("input", function(){
+  let newUser = users.filter((user)=>{
+    return user.name.startsWith(input.value);
+  })
+  let cards = document.querySelector('.cards');
+  cards.innerHTML=" ";
+  if(newUser.length === 0){
+    cards.innerHTML = "<h1 style='color: white'> No User Found </h1>"
+  }else{
+    showUser(newUser);
   }
-});
-
-//saare users show krana
-// filter krana har baqar input karne pe
-//show karna filtered users
-//task -- no user should display when there is no user availaible to display
+})
