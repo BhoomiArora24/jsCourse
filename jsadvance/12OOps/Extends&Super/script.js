@@ -5,7 +5,7 @@
 
 
 class User{
-    constructor(name, address, username, email, role){
+    constructor(name, address, username, email){
         this.name = name;
         this.address = address;
         this.username = username;

@@ -44,6 +44,12 @@ profileLekarAo("navya", function(data){//jb profile navya mil jaye to ye functio
     })
 })
 
+function profileLekeAo(username, cb){
+    setTimeout(`profile fetched of ${username}`)
+}
+
+profileLekeAo("Navya", function(){})
+
 //callback
 function user(username, cb){
     setTimeout(()=> {
