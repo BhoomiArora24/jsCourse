@@ -13,3 +13,15 @@ function createUser(){
     .catch((err) => {console.log(err)})
 }
 createUser();
+
+//How to submit form manually through fetch?
+fetch.addEventListener("submit", function(dets){
+    dets.preventDefault();
+    fetch("url"),//sends request
+    method= "POST",
+    body= JSON.stringify({//json me convert krega pehle data ko
+        name,
+        email,
+        pasword
+    });
+})
