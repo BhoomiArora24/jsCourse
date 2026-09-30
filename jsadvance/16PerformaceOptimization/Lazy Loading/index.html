@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazy Loading</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #000;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+        padding: 40px 0;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+
+      .instruction {
+        color: #aaa;
+        font-size: 18px;
+      }
+
+      .spacer {
+        height: 600px;
+      }
+
+      /* Images before loading */
+      .lazy-img {
+        display: block;
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        margin: 30px auto;
+        opacity: 0;
+        transition: opacity 0.5s ease; 
+      }
+
+      /* Image after loading */
+      .lazy-img.loaded {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Lazy Loading with Intersection Observer</h1>
+
+      <p class="instruction">Scroll down to load the images 👇</p>
+
+      <div class="spacer"></div>
+
+      <img data-src="https://i.pinimg.com/1200x/4d/5e/f9/4d5ef94f9a038da39c34db143e5b98e0.jpg" class="lazy-img" alt="Image 1" />
+
+      <div class="spacer"></div>
+
+      <img data-src="https://i.pinimg.com/1200x/25/08/05/250805101645c2d42fa4ed56e48566a9.jpg" class="lazy-img" alt="Image 2" />
+
+      <div class="spacer"></div>
+
+      <img data-src="https://i.pinimg.com/736x/30/d8/9c/30d89ca175f6e8630ced61401a87e117.jpg" class="lazy-img" alt="Image 3" />
+
+      <div class="spacer"></div>
+
+      <img data-src="https://i.pinimg.com/1200x/1a/a4/b4/1aa4b4f7872441544403d679e5c0fe05.jpg" class="lazy-img" alt="Image 4" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
