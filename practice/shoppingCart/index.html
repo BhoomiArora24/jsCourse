@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Shopping Cart</title>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200">
+      <div
+        class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between"
+      >
+        <h1 class="styleCart text-2xl font-bold">StyleCart</h1>
+
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="max-w-6xl mx-auto px-6 py-10">
+      <!-- Heading -->
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold">Our Collection</h2>
+
+        <p class="text-gray-500 mt-2">
+          Choose your favorite products and add them to your cart.
+        </p>
+      </div>
+
+      <!-- Products -->
+      <section
+        id="productContainer"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+      </section>
+
+      <!-- Cart -->
+      <section class="mt-12 bg-white rounded-2xl border border-gray-200 p-6">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <h2 class="text-2xl font-bold">Shopping Cart</h2>
+
+            <p class="text-gray-500 text-sm mt-1">Products you've added</p>
+          </div>
+
+          <span id="cartTotal" class="text-xl font-bold"> ₹0 </span>
+        </div>
+
+        <div id="cartItems" class="space-y-3">
+          <p id="emptyCart" class="text-gray-400 text-center py-8">
+            Your cart is empty.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
