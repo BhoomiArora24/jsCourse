@@ -1,5 +1,5 @@
+//custom utilities -- creating your own customized function
 const arr = [1,2,3,4,5];
-
 function myMap(arr, cb){
     let newArr = [];
     for(let i = 0; i < arr.length; i++){

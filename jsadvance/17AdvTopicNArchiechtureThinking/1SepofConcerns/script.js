@@ -1,4 +1,4 @@
-//DOM  ka codse and logic code alag rehna chahiye -- this is called seperation of concerns / Modularization
+//DOM  ka code and logic code alag rehna chahiye -- this is called seperation of concerns / Modularization
 
 const btn = document.querySelector("button");
 const ul = document.querySelector("ul");
