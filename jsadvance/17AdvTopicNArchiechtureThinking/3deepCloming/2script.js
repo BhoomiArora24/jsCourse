@@ -1,6 +1,6 @@
 //VERY IMPORTANT
 
-var obj = {
+var userInfo = {
     name: "navya",
     age: 21,
     social: {
@@ -35,7 +35,7 @@ var obj = {
 
 //ab hme ni pta name me kya h vo obj bhi ho skta h array bhi ho skta  ya kuch bhi 
 
-function makeDeepCopy(){
+function makeDeepCopy(obj){
 
     //ye code vapas bhejta h agar object ya array ni h
     if(typeof obj !== 'object' || obj === null){
@@ -51,8 +51,27 @@ function makeDeepCopy(){
     //keys is wakt array h jisme name age h kyoke vo object h to isliye properties were passed
 
     for(let i = 0; i < keys.length; i++){
-        obj[keys]
+        //obj[keys[i]] -- i kivalue is wakt zero h
+        //obj[keys[0]]-- iski value name h
+        //obj['name']- iski value h navya
+        //navya -- ab ye jo h hme bhejna h makeDeepCopy m
+
+        copiedVal[keys[i]] = makeDeepCopy(obj[keys[i]]);//ab jb ye isme jaegi to kuch na kuch return kregi ye hme store krna h copiedval m
+        //copiedVal[keys[i]] ab iski value name h or copiedVal hmne ek object bnaya tha throw new Error("//{
+        // name: 'harsh
+        // }");
+        //to hmare blank object copiedVal me name nam ki deep copy create hochuki h and age age ki bhi hojaegi jb i++ hoga
+        
+
     }
+
+    return copiedVal;
 }
 
-makeDeepCopy({name: "a", age: 21})
+let copy = makeDeepCopy(userInfo);
+console.log(copy);
+
+copy.social.facebook.ac1 = 'changed';
+
+console.log(userInfo.social.facebook.ac1);
+console.log(copy.social.facebook.ac1);
