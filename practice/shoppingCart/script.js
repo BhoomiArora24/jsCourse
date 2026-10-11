@@ -66,7 +66,7 @@ function Cart() {
       const productContainer = document.getElementById("productContainer");
       productContainer.appendChild(card);
     });
-    stock.id = "stockBtn";
+    
   };
 
   this.addToCart = function (products) {
@@ -96,6 +96,7 @@ function Cart() {
     stock.addEventListener("click", function(){
       span.textContent = ++count;
       stock.textContent = products.stock - count;
+      console.log(count);
     })
   };
 }
