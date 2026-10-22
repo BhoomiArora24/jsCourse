@@ -8,6 +8,13 @@ const rows = Math.floor(board.clientHeight / blockHeight);
 //so as we need to store the indexes we need to create a 2d array but by default js doesnor create 2d array
 //therefore we'll create a 1D array overhere and will convert it into an 2d array in runtime
 const blocks = [];
+const snake = [{
+  x: 1, y: 3
+}, {
+  x: 1, y: 4 
+}, {
+  x: 1, y: 5
+}]
 
 // for(let i = 0; i < rows*cols; i++){
 //     const block = document.createElement('div');
@@ -22,7 +29,13 @@ for (let row = 0; row < rows; row++) {
     const block = document.createElement("div");
     block.classList.add("block");
     board.appendChild(block);
-    // block.innerText= `${row},${col}`
+    block.innerText= `${row},${col}`
     blocks[`${row} - ${col}`] = block;
   }
+}
+
+function render(){
+  snake.forEach(block => {
+    console.log(block)
+  })
 }
